@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'snord'; /*a name to be used later*/
+    src: url('./static/fonts/suissnord_R.otf'); /*URL to font*/
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #e1e1e1;
+    width: 100%;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    overflow-x: hidden;
+    z-index: -200;
+}
+
+
+
+
+
+
+
+
+
+
+p {
+  margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  padding: 2rem;
+}
+
+/* Navbar Styling */
+.hero {
+    position: relative;
+    z-index: 50;
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: #f4f4f4;
+    position: fixed;
+    top: 0;
+    padding: 1.25rem;
+    transition: 0.3s;
+    z-index: 50;
+}
+
+.navbar .logo {
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-family: 'snord';
+}
+
+.navbar .logo a {
+  transition: color 0.4s ease-in-out;
+}
+
+.navbar .logo a:hover {
+  color: #32b9d9;
+}
+
+.navbar .nav-menu {
+  display: flex;
+}
+
+.nav-menu .nav-link {
+   margin: 0 1rem;
+    transition: 0.2s color;
+}
+
+.nav-menu .nav-link:hover {
+   color: #ebb216;
+}
+
+/* Navbar icons */
+.nav-menu .nav-link .nav-icon {
+   margin-right: 0.3rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  border-radius: 30px;
+  background-color: #101010;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        /* 
+          You can change the position of the navbar 
+          ----------------------------------------------------------------------------------
+          To succesfully do this, you must change the .nav-menu.active to the chosen position
+          * right: -100%;
+          * .right-menu.active { right: 0;}
+          -----------------------------------------------------------------------------------
+        */
+        right: -100vw;
+        top: 4rem;
+        flex-direction: column;
+        min-width: 200px;
+        text-align: left;
+        transition: 0.3s;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+    .nav-menu.transparent{
+        background-color: rgba(255, 255, 255, 0.16);
+    }
+
+  .nav-menu.active {
+    right: 20px;
+  }
+  
+  .nav-menu .nav-link {
+     padding: 0.6rem 0;
+     font-size: 1.05rem;
+  }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        padding: 0.2rem 0.4rem;
+        transition: 0.2s;
+    }
+
+    .hamburger:hover {
+        background: rgba(255, 255, 255, 0.22);
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.22);
+    }
+
+  .hamburger.active {
+     border: 1px dotted gray;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#wrapper {
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid black;
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#first-h {
+    float:left; /* add this */
+    border: 1px solid red;
+    color: transparent;
+    display: none;
+}
+#first {
+    float:left; /* add this */
+    border: 1px solid red;
+}
+#second {
+    flex-grow: 3;
+    border: 1px solid green;
+    overflow: hidden; /* if you don't want #second to wrap below #first */
+}
