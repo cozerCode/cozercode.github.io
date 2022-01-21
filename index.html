@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <title>Cozer's Webpage</title>
+        <link rel="stylesheet" href="style.css"/>
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <style>
+            .nav-transparent {
+                background: rgba(255, 255, 255, 0.12)!important;
+                top: 1.7%!important;
+                margin: 0 1%!important;
+                width: 98%!important;
+                border-radius: 10px!important;
+                backdrop-filter: blur(20px);
+                box-shadow: 0px 10px 10px #0000005e;
+            }
+            .nav-transparent a , .nav-transparent .bar{
+                color: rgba(121, 136, 136, 0.88)!important;
+            }
+            .nav-transparent a:hover{
+                color: #32b9d9!important;
+            }
+            .nav-transparent .nav-link:hover{
+                color: #ebb216!important;
+            }
+            flex {
+                color: white;
+            }
+            .flex.a {
+                color: white;
+                text-align: center;
+            }
+            .flex.row {
+                flex-direction: row;
+            }
+            .flex.row > div {
+                display: block;
+                position: relative;
+                border: 1px solid red;
+                color: black;
+                text-align: center;
+                line-height: 75px;
+                font-size: 30px;
+                height: 200px;
+                background-color: #f1f1f1!important;
+            }
+            .flex.a h1{
+                position: relative;
+                font-size: 60px;
+            }
+            .flex.a img {
+                border-radius: 50%;
+                margin-bottom: 20px;
+                box-shadow: 0px 0px 30px black;
+            }
+            .flex.row.a a {
+                height: 50px;
+                padding: 7px 25px;
+                top: 0;
+                left: 0;
+                border: 3px solid rgba(0, 226, 255, 0.54);
+                background: rgba(255, 255, 255, 0);
+                color: white;
+                text-align: center;
+                line-height: 75px;
+                font-size: 30px;
+                transition: 0.2s padding, 0.2s background;
+                cursor: pointer;
+            }
+            .flex.row.a a:hover {
+                padding: 7px 30px!important;
+                background: rgba(255, 255, 255, 0.2);
+            }
+            .fixed {
+                position: fixed;
+                top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="home">
+           <header class="hero">
+              <nav class="navbar">
+                 <h1 class="logo">
+                    <a href="#"><span class="fas fa-mask" style="margin-right: 0.5em;"></span>Cozer</a>
+                 </h1>
+                 <div>
+                    <!-- --------------------------------------
+                    -------- Hamburger Links ------------
+                    --------------------------------------- -->
+                    <div class="nav-menu">
+                       <!-- Header icons -->
+                       <a href="#about" class="nav-link"><i class="fas fa-address-card" style="margin-right: 5px;"></i>About</a>
+                       <a href="pages/blogs.html?page='welcome'" class="nav-link"><i class="fas fa-newspaper" style="margin-right: 5px;"></i>Blogs</a>
+                       <a href="https://github.com/cozerCode" class="nav-link"><i class="fab nav-icon fa-github"></i>GitHub</a>
+                       <a href="https://itch.io" class="nav-link" title="i can explain..."><i class="fab nav-icon fa-itch-io"></i>Itch.io</a>
+                       <a href="https://twitter.com" class="nav-link"><i class="fab nav-icon fa-twitter"></i>Twitter</a>
+                    </div>
+
+                    <!-- --------------------------------------
+                    ---------- Hamburger button ---------------
+                    --------------------------------------- -->
+                    <div class="hamburger">
+                       <span class="bar"></span>
+                       <span class="bar"></span>
+                       <span class="bar"></span>
+                    </div>
+                 </div>
+              </nav>
+           </header>
+        </div>
+        <img src="./static/images/Optimized-donut.png" style="position: absolute;top: -50px;left: -30px;width: 110%;z-index: -11;filter: brightness(0.7) contrast(1.07);filter: blur(6px);">
+        <div class="flex a" style="position: relative;margin-top: 150px;z-index: 0;">
+            <img src="./static/images/logo.png" style="height: 23%;">
+            <h1>Cozer</h1>
+            <div class="flex row a" style="margin-top: 10px;">
+                <a href="https://github.com/cozerCode"><span class="fab fa-github" style="margin-right: 0.5em;"></span>GitHub</a>
+                <a href="https://discord.com/app"><span class="fab fa-discord" style="margin-right: 0.5em;"></span>Discord</a>
+                <a href="https://cozer-official971.itch.io/" title="i can explain..."><span class="fab fa-itch-io" style="margin-right: 0.5em;"></span>Itch</a>
+            </div>
+        </div>
+        <div style="position: relative;margin-top: 80px;width: 103%;height: 50%;background: #e1e1e1;padding: 50px;" id="wrapper">
+            <div id="first-h" style="padding: 50px;font-size: 1.5vw;">Table of Content</div>
+            <div id="first" style="padding: 50px;font-size: 1.5vw;">Table of Content</div>
+            <div id="second" style="padding: 50px;">Hello!</div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <script>
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+
+            hamburger.addEventListener("click", mobileMenu);
+
+            function mobileMenu() {
+              hamburger.classList.toggle("active");
+              navMenu.classList.toggle("active");
+            }
+
+            const navLink = document.querySelectorAll(".nav-link");
+
+            navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+            function closeMenu() {
+              hamburger.classList.remove("active");
+              navMenu.classList.remove("active");
+            }
+            
+            
+            
+            var myNav = document.getElementsByClassName('navbar')[0];
+            var myNavDrop = document.getElementsByClassName('nav-menu')[0];
+            function update()
+            {
+                let left = document.getElementById("first");
+                let left_h = document.getElementById("first-h");
+                let right = document.getElementById("second");
+                let rect = right.getBoundingClientRect();
+                for (var key in rect) {
+                  if(typeof rect[key] !== 'function') {
+                    if (key == "y"){
+                        if (rect[key] <= 100){
+                            left.classList.add("fixed");
+                            left_h.style.display = "block";
+                        }
+                        else {
+                            left.classList.remove("fixed");
+                            left_h.style.display = "none";
+                        }
+                    }
+                  }
+                }
+            }
+            window.onscroll = function () { 
+                update();
+                if (document.body.scrollTop >= 1 || document.documentElement.scrollTop >= 1 ) {
+                    myNav.classList.add("nav-transparent");
+                    myNavDrop.classList.add("transparent");
+                } 
+                else {
+                    myNav.classList.remove("nav-transparent");
+                    myNavDrop.classList.remove("transparent");
+                }
+            };
+        </script>
+    </body>
+</html>
