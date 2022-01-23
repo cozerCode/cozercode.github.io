@@ -39,7 +39,6 @@
             .flex.row > div {
                 display: block;
                 position: relative;
-                border: 1px solid red;
                 color: black;
                 text-align: center;
                 line-height: 75px;
@@ -78,6 +77,150 @@
                 position: fixed;
                 top: 100px;
             }
+            h2 {
+                font-size: 1.5vw;
+            }
+            
+            .content .container h1 {
+              font-size: 48px;
+              margin-bottom: 2rem;
+            }
+
+            .content .container p {
+              color: #ccc;
+            }
+
+            .content .container p a {
+              color: #fff;
+            }
+
+            footer {
+              width: 100%;
+              background-color: #1e3161;
+            }
+
+            .container {
+              width: 80%;
+              margin: 0 auto;
+              padding: 3rem 0;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .container .row {
+              width: 100%;
+              display: grid;
+              gap: 10px;
+              grid-template-columns: repeat(3, 1fr);
+              place-items: center;
+            }
+
+            .container .row:nth-child(2) {
+              grid-template-columns: repeat(1, 1fr);
+              margin-top: 1rem;
+            }
+
+            .row .col {
+              height: 100%;
+              align-self: flex-start;
+            }
+
+            .col h3 {
+              font-size: 30px;
+              margin-bottom: 1rem;
+            }
+
+            .container ul li {
+              list-style-type: none;
+              margin: 0.75rem 0;
+            }
+
+            .container ul li a {
+              font-size: 18px;
+              color: #fff;
+              text-decoration: none;
+              padding: 7px 10px;
+              border-radius: 5px;
+              transition: 0.4s ease;
+            }
+
+            .container ul li a:hover {
+              background-color: #5ac1d8;
+            }
+
+            .language ul {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: center;
+            }
+            .language ul li {
+              margin: 0.5rem 0.5rem 0.5rem 0;
+            }
+
+            .socail ul {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin: 0;
+              padding: 0;
+            }
+
+            .socail ul li {
+              margin-right: 0.5rem;
+            }
+
+            .socail ul li a {
+              font-size: 24px;
+            }
+
+            @media screen and (max-width: 1000px) {
+                h2 {
+                    font-size: 2.5vw;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+              .container .row {
+                grid-template-columns: repeat(1, 1fr);
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+              }
+
+              .col h3 {
+                font-size: 24px;
+              }
+
+              .language {
+                margin: 1rem 0;
+              }
+
+              .container > ul li a {
+                font-size: 16px;
+              }
+            }
+
+            @media screen and (max-width: 520px) {
+              .col h3 {
+                font-size: 18px;
+              }
+
+              .language {
+                margin: 0.5rem 0;
+              }
+
+              .container > ul li a {
+                font-size: 14px;
+              }
+            }
+            .brand_lg {
+                height: 3vw;
+            }
+
         </style>
     </head>
     <body>
@@ -94,11 +237,15 @@
                     --------------------------------------- -->
                     <div class="nav-menu">
                        <!-- Header icons -->
-                       <a href="#about" class="nav-link"><i class="fas fa-address-card" style="margin-right: 5px;"></i>About</a>
-                       <a href="pages/blogs.html?page='welcome'" class="nav-link"><i class="fas fa-newspaper" style="margin-right: 5px;"></i>Blogs</a>
+                       <a href="#hello" class="nav-link"><i class="fas fa-address-card" style="margin-right: 5px;"></i>About</a>
+                       <a href="pages/blogs.html?page='welcome'" class="nav-link">
+                           <i class="fas fa-newspaper" style="margin-right: 5px;"></i>
+                           <span style="margin-right: 2px;">Blogs</span>
+                           <i class="fas fa-exclamation" style="color:red;"></i>
+                        </a>
                        <a href="https://github.com/cozerCode" class="nav-link"><i class="fab nav-icon fa-github"></i>GitHub</a>
-                       <a href="https://itch.io" class="nav-link" title="i can explain..."><i class="fab nav-icon fa-itch-io"></i>Itch.io</a>
-                       <a href="https://twitter.com" class="nav-link"><i class="fab nav-icon fa-twitter"></i>Twitter</a>
+                       <a href="https://cozer-official971.itch.io/" class="nav-link" title="i can explain..."><i class="fab nav-icon fa-itch-io"></i>Itch.io</a>
+                       <a href="https://twitter.com/CozerEpic" class="nav-link"><i class="fab nav-icon fa-twitter"></i>Twitter</a>
                     </div>
 
                     <!-- --------------------------------------
@@ -113,78 +260,91 @@
               </nav>
            </header>
         </div>
-        <img src="./static/images/Optimized-donut.png" style="position: absolute;top: -50px;left: -30px;width: 110%;z-index: -11;filter: brightness(0.7) contrast(1.07);filter: blur(6px);">
+        <img src="./static/images/donut.png" style="position: absolute;top: -50px;left: -30px;width: 110%;z-index: -11;filter: brightness(0.7) contrast(1.07);filter: blur(6px);" class="sussyImage">
         <div class="flex a" style="position: relative;margin-top: 150px;z-index: 0;">
             <img src="./static/images/logo.png" style="height: 23%;">
             <h1>Cozer</h1>
             <div class="flex row a" style="margin-top: 10px;">
                 <a href="https://github.com/cozerCode"><span class="fab fa-github" style="margin-right: 0.5em;"></span>GitHub</a>
-                <a href="https://discord.com/app"><span class="fab fa-discord" style="margin-right: 0.5em;"></span>Discord</a>
-                <a href="https://cozer-official971.itch.io/" title="i can explain..."><span class="fab fa-itch-io" style="margin-right: 0.5em;"></span>Itch</a>
+                <a href="https://discordapp.com/users/867438651687174165"><span class="fab fa-discord" style="margin-right: 0.5em;"></span>Discord</a>
+                <a href="https://cozer-official971.itch.io/" title="i can explain..."><span class="fab fa-itch-io" style="margin-right: 0.5em;"></span>Itch io</a>
             </div>
         </div>
-        <div style="position: relative;margin-top: 80px;width: 103%;height: 50%;background: #e1e1e1;padding: 50px;" id="wrapper">
-            <div id="first-h" style="padding: 50px;font-size: 1.5vw;">Table of Content</div>
-            <div id="first" style="padding: 50px;font-size: 1.5vw;">Table of Content</div>
-            <div id="second" style="padding: 50px;">Hello!</div>
+        <div style="position: relative;margin-top: 80px;width: 103%;background: #e1e1e1;padding: 50px;" id="wrapper">
+            <div id="first-h" style="padding: 30px;font-size: 1.5vw;"><span style="font-size: 2vw">Table of Content</span></div>
+            <div id="first" style="padding: 30px;font-size: 1.5vw;">
+                <span style="font-size: 2vw">Table of Content</span> <br><br>
+                <ul style="list-style-type: square;padding-left: 20%;">
+                    <li><a href="#hello" style="text-decoration: underline;">Hello!</a></li>
+                    <li><a href="#projs" style="text-decoration: underline;">My projects:</a></li>
+                        <li style="margin-left: 10;list-style-type: none;">&#8226;<a href="#" style="text-decoration: underline;margin-left: 20;">A game.</a></li>
+                        <li style="margin-left: 10;list-style-type: none;">&#8226;<a href="#" style="text-decoration: underline;margin-left: 20;">A website.</a></li>
+                    <li><a href="#contact" style="text-decoration: underline;">Contact me.</a></li>
+                    <li><a href="#website-content" style="text-decoration: underline;">Website content.</a></li>
+                </ul>
+            </div>
+            <div id="second" style="padding: 50px;">
+                <div id="hello">
+                    <h1 style="font-size: 9vh;font-weight: 1000;text-align: center;">Welcome To My website!</h1>
+                    <br><br><br><br><br><br><br>
+                    <span style="position: relative;font-weight: 1000;font-size: 7vh; margin: 50px;">Hello !<i onclick="copyToCB('cozercode.github.io:8080/#hello')"class="fas fa-link" style="position: relative;font-size: 1.5vw;top: -10px;margin-left: 5;cursor: pointer;color: #0067ce;"></i></span>
+                    <h2 style="margin-left: 5;"><br>I'm <a href="https://github.com/cozerCode">Cozer</a>, a programmer, website designer, and a game developer!</h2>
+                    <h2 style="margin-left: 5;"><br>I mainly do c++, html css javascript, but I'm also experienced in:</h2><br>
+                    <table>
+                        <tr>
+                        <div align="center">    
+                        <img class="brand_lg" style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" />  
+                        <img class="brand_lg" style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" />  
+                        <img class="brand_lg" style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" />  
+                        <img class="brand_lg" style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg" alt="C++" height="50" />
+                        <img class="brand_lg" style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" />  
+                        <img class="brand_lg" style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50" />  
+                        <img class="brand_lg" style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/csharp-original.svg" alt="C#" height="50" />  
+                        <img class="brand_lg" style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/dot-net-original-wordmark.svg" alt=".NET" height="50" />
+                        <img class="brand_lg" style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/c-original.svg" alt="C" height="50" />
+                        <img class="brand_lg" style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/unity.png" alt="Unity" height="50" />
+
+                        </tr>
+                    </table> 
+                </div>
+                <div id="projs">
+                    <br><br><br><br><br><br><br>
+                    <span style="position: relative;font-weight: 1000;font-size: 7vh; margin: 50px;">My Projects:<i onclick="copyToCB('cozercode.github.io/#projs')"class="fas fa-link" style="position: relative;font-size: 1.5vw;top: -10px;margin-left: 5;cursor: pointer;color: #0067ce;"></i></span>
+                    <h2 style="margin-left: 5;"><br>I'm currently working on <a href="https://github.com/cozerCode/cozerCode.github.io">this website</a>. But, I also have done other things that are listed here:</h2>
+                    <ul style="margin-left: 5;">
+                        <h2>
+                            <li>will be updated later<br></li>
+                        </h2>
+                    </ul>
+                </div>
+                <div id="contact">
+                    <br><br><br><br><br><br><br>
+                    <span style="position: relative;font-weight: 1000;font-size: 7vh; margin: 50px;">Contact me?<i onclick="copyToCB('cozercode.github.io/#contact')"class="fas fa-link" style="position: relative;font-size: 1.5vw;top: -10px;margin-left: 5;cursor: pointer;color: #0067ce;"></i></span>
+                    <h2 style="margin-left: 5;">Email: <a href="mailto:cntct_usercozer@outlook.com">cntct_usercozer@outlook.com</a><br> Twitter: <a href="https://twitter.com/CozerEpic">@CozerEpic</a><br> Discord: <a href="https://discordapp.com/users/867438651687174165">_myst#8229</a></h2>
+                </div>
+                <div id="website-content">
+                    <br><br><br><br><br><br><br>
+                    <span style="position: relative;font-weight: 1000;font-size: 7vh; margin: 50px;">Teleport:<i onclick="copyToCB('cozercode.github.io/#website-content')"class="fas fa-link" style="position: relative;font-size: 1.5vw;top: -10px;margin-left: 5;cursor: pointer;color: #0067ce;"></i></span>
+                    <ul style="margin-left: 5;">
+                        <h2>
+                            <li><a href="./pages/blogs.html">Blogs</a><br></li>
+                            <li><a href="">idk</a><br></li>
+                            <li><a href="#">imma update this later</a><br></li>
+                        </h2>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <script>
-            const hamburger = document.querySelector(".hamburger");
-            const navMenu = document.querySelector(".nav-menu");
-
-            hamburger.addEventListener("click", mobileMenu);
-
-            function mobileMenu() {
-              hamburger.classList.toggle("active");
-              navMenu.classList.toggle("active");
-            }
-
-            const navLink = document.querySelectorAll(".nav-link");
-
-            navLink.forEach((n) => n.addEventListener("click", closeMenu));
-
-            function closeMenu() {
-              hamburger.classList.remove("active");
-              navMenu.classList.remove("active");
-            }
-            
-            
-            
-            var myNav = document.getElementsByClassName('navbar')[0];
-            var myNavDrop = document.getElementsByClassName('nav-menu')[0];
-            function update()
-            {
-                let left = document.getElementById("first");
-                let left_h = document.getElementById("first-h");
-                let right = document.getElementById("second");
-                let rect = right.getBoundingClientRect();
-                for (var key in rect) {
-                  if(typeof rect[key] !== 'function') {
-                    if (key == "y"){
-                        if (rect[key] <= 100){
-                            left.classList.add("fixed");
-                            left_h.style.display = "block";
-                        }
-                        else {
-                            left.classList.remove("fixed");
-                            left_h.style.display = "none";
-                        }
-                    }
-                  }
-                }
-            }
-            window.onscroll = function () { 
-                update();
-                if (document.body.scrollTop >= 1 || document.documentElement.scrollTop >= 1 ) {
-                    myNav.classList.add("nav-transparent");
-                    myNavDrop.classList.add("transparent");
-                } 
-                else {
-                    myNav.classList.remove("nav-transparent");
-                    myNavDrop.classList.remove("transparent");
-                }
-            };
-        </script>
+        
+        <footer style="box-shadow: 0px 5vh 0px #2c5081 inset;">
+          <div class="container">
+            <div class="row">
+              <div class="col about" style="flex-grow: 8;">
+                <h3 style="color: white;">Made by <a href="https://github.com/cozerCode" style="color: aqua;">Cozer</a>, 2022.</h3>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
