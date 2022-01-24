@@ -1,1 +1,55 @@
-nav-bar component 
+<style>
+	.nav-transparent {
+		background: rgba(255, 255, 255, 0.12)!important;
+		top: 1.7%!important;
+		margin: 0 1%!important;
+		width: 98%!important;
+		border-radius: 10px!important;
+		backdrop-filter: blur(20px);
+		box-shadow: 0px 10px 10px #0000005e;
+	}
+	.nav-transparent a , .nav-transparent .bar{
+		color: rgba(121, 136, 136, 0.88)!important;
+	}
+	.nav-transparent a:hover{
+		color: #32b9d9!important;
+	}
+	.nav-transparent .nav-link:hover{
+		color: #ebb216!important;
+	}
+</style>
+<div id="home">
+   <header class="hero">
+	  <nav class="navbar">
+		 <h1 class="logo">
+			<a href="#"><span class="fas fa-mask" style="margin-right: 0.5em;"></span>Cozer</a>
+		 </h1>
+		 <div>
+			<!-- --------------------------------------
+			-------- Hamburger Links ------------
+			--------------------------------------- -->
+			<div class="nav-menu">
+			   <!-- Header icons -->
+			   <a href="#hello" class="nav-link"><i class="fas fa-address-card" style="margin-right: 5px;"></i>About</a>
+			   <a href="pages/blogs.html?page='welcome'" class="nav-link">
+				   <i class="fas fa-newspaper" style="margin-right: 5px;"></i>
+				   <span style="margin-right: 2px;">Blogs</span>
+				   <i class="fas fa-exclamation" style="color:red;"></i>
+				</a>
+			   <a href="https://github.com/cozerCode" class="nav-link"><i class="fab nav-icon fa-github"></i>GitHub</a>
+			   <a href="https://cozer-official971.itch.io/" class="nav-link" title="i can explain..."><i class="fab nav-icon fa-itch-io"></i>Itch.io</a>
+			   <a href="https://twitter.com/CozerEpic" class="nav-link"><i class="fab nav-icon fa-twitter"></i>Twitter</a>
+			</div>
+
+			<!-- --------------------------------------
+			---------- Hamburger button ---------------
+			--------------------------------------- -->
+			<div class="hamburger">
+			   <span class="bar"></span>
+			   <span class="bar"></span>
+			   <span class="bar"></span>
+			</div>
+		 </div>
+	  </nav>
+   </header>
+</div>
