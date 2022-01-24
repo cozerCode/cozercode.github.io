@@ -224,42 +224,7 @@
         </style>
     </head>
     <body>
-        
-        <div id="home">
-           <header class="hero">
-              <nav class="navbar">
-                 <h1 class="logo">
-                    <a href="#"><span class="fas fa-mask" style="margin-right: 0.5em;"></span>Cozer</a>
-                 </h1>
-                 <div>
-                    <!-- --------------------------------------
-                    -------- Hamburger Links ------------
-                    --------------------------------------- -->
-                    <div class="nav-menu">
-                       <!-- Header icons -->
-                       <a href="#hello" class="nav-link"><i class="fas fa-address-card" style="margin-right: 5px;"></i>About</a>
-                       <a href="pages/blogs.html?page='welcome'" class="nav-link">
-                           <i class="fas fa-newspaper" style="margin-right: 5px;"></i>
-                           <span style="margin-right: 2px;">Blogs</span>
-                           <i class="fas fa-exclamation" style="color:red;"></i>
-                        </a>
-                       <a href="https://github.com/cozerCode" class="nav-link"><i class="fab nav-icon fa-github"></i>GitHub</a>
-                       <a href="https://cozer-official971.itch.io/" class="nav-link" title="i can explain..."><i class="fab nav-icon fa-itch-io"></i>Itch.io</a>
-                       <a href="https://twitter.com/CozerEpic" class="nav-link"><i class="fab nav-icon fa-twitter"></i>Twitter</a>
-                    </div>
-
-                    <!-- --------------------------------------
-                    ---------- Hamburger button ---------------
-                    --------------------------------------- -->
-                    <div class="hamburger">
-                       <span class="bar"></span>
-                       <span class="bar"></span>
-                       <span class="bar"></span>
-                    </div>
-                 </div>
-              </nav>
-           </header>
-        </div>
+		<div include-html="components/nav-bar.html"></div>
         <img src="./static/images/donut.png" style="position: absolute;top: -50px;left: -30px;width: 110%;z-index: -11;filter: brightness(0.7) contrast(1.07);filter: blur(6px);" class="sussyImage">
         <div class="flex a" style="position: relative;margin-top: 150px;z-index: 0;">
             <img src="./static/images/logo.png" style="height: 23%;">
@@ -346,5 +311,8 @@
           </div>
         </footer>
         <script type="text/javascript" src="script.js"></script>
+		<script>
+			includeHTML();
+		</script>
     </body>
 </html>

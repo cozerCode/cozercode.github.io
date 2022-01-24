@@ -1,32 +1,9 @@
+
 function copyToCB(text)
 {
     navigator.clipboard.writeText(text);
 }
 
-
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", mobileMenu);
-
-function mobileMenu() {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-}
-
-const navLink = document.querySelectorAll(".nav-link");
-
-navLink.forEach((n) => n.addEventListener("click", closeMenu));
-
-function closeMenu() {
-  hamburger.classList.remove("active");
-  navMenu.classList.remove("active");
-}
-
-
-
-var myNav = document.getElementsByClassName('navbar')[0];
-var myNavDrop = document.getElementsByClassName('nav-menu')[0];
 function update()
 {
     let left = document.getElementById("first");
@@ -50,8 +27,72 @@ function update()
       }
     }
 }
+
 window.onscroll = function () { 
-    update();
+	update();
+}
+
+function includeHTML() {
+  	var z, i, elmnt, file, xhttp;
+  	/* Loop through a collection of all HTML elements: */
+  	z = document.getElementsByTagName("*");
+  	for (i = 0; i < z.length; i++) {
+    	elmnt = z[i];
+    	/*search for elements with a certain atrribute:*/
+    	file = elmnt.getAttribute("include-html");
+    	if (file) {
+      		/* Make an HTTP request using the attribute value as the file name: */
+      		xhttp = new XMLHttpRequest();
+      		xhttp.onreadystatechange = function() {
+        		if (this.readyState == 4) {
+        			if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+        			if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+        			/* Remove the attribute, and call this function once more: */
+        			elmnt.removeAttribute("include-html");
+        			includeHTML();
+        		}
+      		}
+      		xhttp.open("GET", file, true);
+      		xhttp.send();
+      		/* Exit the function: */
+      		return;
+    	}
+  	}
+}
+
+var hamburger;
+var navMenu;
+var navLink;
+var myNav;
+var myNavDrop;
+
+function stuff()
+{
+	hamburger = document.querySelector(".hamburger");
+	navMenu = document.querySelector(".nav-menu");
+	navLink = document.querySelectorAll(".nav-link");
+
+	myNav = document.getElementsByClassName('navbar')[0];
+	myNavDrop = document.getElementsByClassName('nav-menu')[0];
+
+	hamburger.addEventListener("click", mobileMenu);
+
+	navLink.forEach((n) => n.addEventListener("click", closeMenu));
+}
+
+function mobileMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
+
+function closeMenu() {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}
+
+
+window.onscroll = function () {
+	stuff();
     if (document.body.scrollTop >= 1 || document.documentElement.scrollTop >= 1 ) {
         myNav.classList.add("nav-transparent");
         myNavDrop.classList.add("transparent");
