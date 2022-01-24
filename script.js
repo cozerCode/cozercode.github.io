@@ -1,4 +1,3 @@
-
 function copyToCB(text)
 {
     navigator.clipboard.writeText(text);
