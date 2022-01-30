@@ -63,7 +63,7 @@ var hamburger;
 var navMenu;
 var navLink;
 var myNav;
-var myNavDrop;
+var myNavDrop = document.getElementsByClassName('nav-menu')[0];
 
 function stuff()
 {
@@ -72,7 +72,6 @@ function stuff()
 	navLink = document.querySelectorAll(".nav-link");
 
 	myNav = document.getElementsByClassName('navbar')[0];
-	myNavDrop = document.getElementsByClassName('nav-menu')[0];
 
 	hamburger.addEventListener("click", mobileMenu);
 
@@ -101,3 +100,22 @@ window.onscroll = function () {
         myNavDrop.classList.remove("transparent");
     }
 };
+
+
+function onReady(callback) {
+  var intervalId = window.setInterval(function() {
+    if (document.getElementsByTagName('body')[0] !== undefined) {
+      window.clearInterval(intervalId);
+      callback.call(this);
+    }
+  }, 1000);
+}
+
+function setVisible(selector, visible) {
+  document.querySelector(selector).style.display = visible ? 'block' : 'none';
+}
+
+onReady(function() {
+  setVisible('.paa', true);
+  setVisible('#loading', false);
+});
