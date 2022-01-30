@@ -1,7 +1,7 @@
 var blog_titles = ["The website is here!", "test", "another test"];
 var blog_descs = ["The my github pages website is finally done!", "My website v0.7", "My website v0.6"];
 var blog_dates = ["2022/02/01", "2021/08/26", "2020/05/16"];
-var blog_link = ["../test.html?blog=website-0.8", "../test.html?blog=website-0.7", "../test.html?blog=website-0.6"];
+var blog_link = ["blog.html?blog=website-0.8", "blog.html?blog=website-0.7", "blog.html?blog=website-0.6"];
 
 var list = document.getElementById('demo');
 
@@ -63,17 +63,9 @@ function load_blog()
 	{
 		if (blog_name == blogs[i])
 		{
-			read.src = "./static/blog_content/" + blog_name + ".md";
+			read.src = "../static/blog_content/" + blog_name + ".md";
 			document.title = "CBlogs - " + blog_name.replace("-", " ");
 			found = 1;
-			/*
-			if (i == 0) {
-				console.log("yup");
-				read.src = "./static/blog_content/" + blog_name + ".md";
-				document.title = "CBlogs - " + blog_name.replace("-", " ");
-				found = 1;
-			}
-			*/
 		}
 		console.log(i);
 		console.log(found);

@@ -8,7 +8,7 @@
 
 ### <span id="new">New features:
  
-This is the first public beta version `0.921` of the website, and it features:
+This is the first public beta version `0.922` of the website, and it features:
  * The landing website page. <sub>ofc</sub>
  * <abbr title="Hyper Text Markup Language">HTML</abbr> including system.
  * Separated files for the `footer` and the `navigtion bar` To make it easier to use it in multiple pages.
