@@ -78,14 +78,29 @@
                 top: 100px;
             }
             h2 {
-                font-size: 1.5vw;
+                font-size: 1.5rem;
             }
-            
-            
 
+			.page    { display: none; padding: 0 0.5em; }
+			.page h1 { font-size: 2em; line-height: 1em; margin-top: 1.1em; font-weight: bold; }
+			.page p  { font-size: 1.5em; line-height: 1.275em; margin-top: 0.15em; }
+
+			#loading {
+			  display: block;
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  z-index: 100;
+			  width: 100vw;
+			  height: 100vh;
+			  background: #efefef;
+			  background-image: url("https://i.stack.imgur.com/MnyxU.gif");
+			  background-repeat: no-repeat;
+			  background-position: center;
+			}
         </style>
     </head>
-    <body>
+    <body class="paa">
 		<div include-html="components/nav-bar.html"></div>
         <img src="./static/images/donut.png" style="position: absolute;top: -50px;left: -30px;width: 110%;z-index: -11;filter: brightness(0.7) contrast(1.07);filter: blur(6px);" class="sussyImage">
         <div class="flex a" style="position: relative;margin-top: 150px;z-index: 0;">
@@ -114,9 +129,9 @@
                 <div id="hello">
                     <h1 style="font-size: 9vh;font-weight: 1000;text-align: center;">Welcome To My website!</h1>
                     <br><br><br><br><br><br><br>
-                    <span style="position: relative;font-weight: 1000;font-size: 7vh; margin: 50px;">Hello !<i onclick="copyToCB('cozercode.github.io:8080/#hello')"class="fas fa-link" style="position: relative;font-size: 1.5vw;top: -10px;margin-left: 5;cursor: pointer;color: #0067ce;"></i></span>
-                    <h2 style="margin-left: 5;"><br>I'm <a href="https://github.com/cozerCode">Cozer</a>, a programmer, website designer, and a game developer!</h2>
-                    <h2 style="margin-left: 5;"><br>I mainly do c++, html css javascript, but I'm also experienced in:</h2><br>
+                    <span style="position: relative;font-weight: 1000;font-size: 7vh; margin: 50px;">Hello!<i onclick="copyToCB('cozercode.github.io:8080/#hello')"class="fas fa-link" style="position: relative;font-size: 1.5vw;top: -10px;margin-left: 5;cursor: pointer;color: #0067ce;"></i></span>
+                    <h2 style="margin-left: 5;"><br>&emsp;I'm <a href="https://github.com/cozerCode">Cozer</a>, a programmer, website designer, and a game developer!</h2>
+                    <h2 style="margin-left: 5;"><br>&emsp;I mainly do c++, html css javascript, but I'm also experienced in:</h2><br>
                     <table>
                         <tr>
                         <div align="center">    
@@ -137,7 +152,7 @@
                 <div id="projs">
                     <br><br><br><br><br><br><br>
                     <span style="position: relative;font-weight: 1000;font-size: 7vh; margin: 50px;">My Projects:<i onclick="copyToCB('cozercode.github.io/#projs')"class="fas fa-link" style="position: relative;font-size: 1.5vw;top: -10px;margin-left: 5;cursor: pointer;color: #0067ce;"></i></span>
-                    <h2 style="margin-left: 5;"><br>I'm currently working on <a href="https://github.com/cozerCode/cozerCode.github.io">this website</a>. But, I also have done other things that are listed here:</h2>
+                    <h2 style="margin-left: 5;"><br>&emsp;I'm currently working on <a href="https://github.com/cozerCode/cozerCode.github.io">this website</a>. But, I also have done other things that are listed here:</h2>
                     <ul style="margin-left: 5;">
                         <h2>
                             <li>will be updated later<br></li>
@@ -156,16 +171,18 @@
                         <h2>
                             <li><a href="./pages/blogs.html">Blogs</a><br></li>
                             <li><a href="">idk</a><br></li>
-                            <li><a href="#">imma update this later</a><br></li>
+                            <li><a href="#">will be updated later</a><br></li>
                         </h2>
                     </ul>
                 </div>
             </div>
-        </div>
+          </div>
+		</div>
         <div include-html="./components/footer.html"></div>
-        <script type="text/javascript" src="script.js"></script>
-		<script>
-			includeHTML();
-		</script>
     </body>
+	<script type="text/javascript" src="script.js"></script>
+	<script>
+		includeHTML();
+	</script>
+	<div id="loading"></div>
 </html>
